@@ -1,0 +1,56 @@
+/* doing general formatting of background color and font */
+body {
+  background-color: bisque;
+  font-family: Veranda monospace;
+  font-size: 1.25em;
+  margin-left: 6rem;
+  margin-top: 3rem;
+  margin-right: 6rem;
+}
+
+/* changing font style and style for main heading*/
+h1 {
+  font-family: 'Courier New';
+  font-size: xxx-large;
+  font-weight: bolder;
+  text-align: center;
+}
+/* changing font style and size for sub-headings*/
+h3 {
+  font-weight: bold;
+  font-family: Cambria;
+  font-size: x-large;
+  padding-top: 1rem;
+}
+/* adjusting wa image so that it floats on left side of "a little background section */
+.image1 {
+  float: left;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+  top: 1rem;
+}
+
+/* adjusting image so that it floats right of education section */
+.image2 {
+  float: right;
+  padding-left: 1rem;
+  position: relative;
+  top: 1rem;
+}
+
+/* adjusting image so that it floats to left of job section*/
+.image3 {
+  float: left;
+  padding-right: 1rem;
+  position: relative;
+  top: 0.5rem;
+ }
+
+/* adjusting image so that it floats to right of goals*/
+.image4 {
+  float: right;
+  padding-left: 1rem;
+  position: relative;
+  top: 1.5rem;
+}
