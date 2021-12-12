@@ -8,6 +8,7 @@ let username = prompt('What is your name?');
 //console.log(username);  //proof that code worked
 alert('Hello ' + username + '! Welcome to my page. Here are seven questions to get to know me better.');
 
+let points = 0; //counting number of questions user gets correct starting from 0
 
 //Question 1: Do I like reading? Assigning lowerLikeReading as variable to change likeReading input to lower case by using .toLowerCase()
 let likeReading = prompt('Do I like reading? Yes or No');
@@ -15,6 +16,7 @@ let lowerLikeReading = likeReading.toLowerCase();
 //console.log(likeReading); //proof that code initially worked
 if (lowerLikeReading === 'yes' || lowerLikeReading === 'y'){
   //console.log('Yes, I like reading');
+  points++;
   alert('Yes, I like reading');
 } else if (lowerLikeReading === 'no' || lowerLikeReading === 'n'){
   //console.log('No, I do like reading');
@@ -33,6 +35,7 @@ if (likeDriving === 'yes' || likeDriving === 'y'){
   alert('No. I actually hate driving downtown. Parking is hard to find');
 } else if (likeDriving === 'no' || likeDriving === 'n'){
   //console.log('Yes, I don't like driving in Seattle');
+  points++;
   alert('Yes, I don\'t like driving in Seattle. I prefer the bus');
 } else {
   //console.log('Please answer yes or no');
@@ -47,6 +50,7 @@ if (haveSibling === 'yes' || haveSibling === 'y'){
   alert('No, I have a brother');
 } else if (haveSibling === 'no' || haveSibling === 'n'){
   //console.log('Yes, I do have a sibling');
+  points++;
   alert('Correct, I do have a brother');
 } else {
   //console.log('Please answer yes or no');
@@ -59,6 +63,7 @@ let nightOwl = prompt('Am I a night owl?').toLowerCase();
 //console.log(nightOwl);  //proof that code worked
 if (nightOwl === 'yes' || nightOwl === 'y'){
   //console.log('Yes, I\'m a night owl');
+  points++;
   alert('Yes, I\'m a night owl. Hoot, Hoot');
 } else if (nightOwl === 'no' || nightOwl === 'n'){
   //console.log('No, I am a night owl');
@@ -74,6 +79,7 @@ let likeCoffee = prompt('Do I like coffee?').toLowerCase();
 //console.log(likeCoffee);  //proof that code worked
 if (likeCoffee === 'yes' || likeCoffee === 'y'){
   //console.log('Yes, I like coffee');
+  points++;
   alert('Yes, I like coffee');
 } else if (likeCoffee === 'no' || likeCoffee === 'n'){
   //console.log('No, I do like coffee');
@@ -83,16 +89,17 @@ if (likeCoffee === 'yes' || likeCoffee === 'y'){
   alert('Please answer yes or no');
 }
 
-//Question 6: user guesses a number; has 4 attempts to get it correct; prompt to display if guesses are too high or low; displays correct answer if guesses are incorrect; got help from Tyler, TA, on how placement of "--" to deincrament numOfAttempts
+//Question 6: user guesses a number; has 4 attempts to get it correct; prompt to display if guesses are too high or low; displays correct answer if guesses are incorrect; got help from Tyler, TA, on how placement of "--" to decrement numOfAttempts
 let numOfAttempts = 4;
 while (numOfAttempts > 0){
-  let guess = prompt('How many do I have?');
+  let guess = prompt('How many states have I lived in?');
   let numberOfGuess = parseInt(guess);
   //console.log(numberOfGuess); see user's input
   //console.log(typeof(numberOfGuess)); to check that data type is number
 
   if (numberOfGuess === 3){ //correct answer is 3
     console.log('correct',numberOfGuess); //track user input
+    points++;
     alert('You\'re right!');
     break; // stops code once correct answer is entered
   } else if (numberOfGuess > 3){
@@ -112,10 +119,11 @@ let booksILike = ['thriller', 'mystery', 'historical fiction', 'crime', 'science
 let attempts = 6;
 let correctAnswer = false; //set as false since answer likely to be false
 while (attempts > 0 && !correctAnswer){ //while loop runs when "attempts" is greater than 0 AND "correctAnswer" is true; that's the purpose of the "!" before correctAnswer so code can run
-let guesses = prompt('What are my favorite types of books?');
-attempts--;
+  let guesses = prompt('What are my favorite types of books?');
+  attempts--;
   for (let i = 0; i < 6; i++){
     if (guesses === booksILike[i]){
+      points++;
       alert('correct');
       correctAnswer = true; //changed "correctAnswer" to true to exit out of loop when a correct answer is typed; this changes the value of !correctAnswer, which was true in line 114, to false so the code stops running
     }
@@ -124,4 +132,4 @@ attempts--;
 alert('I like reading ' + booksILike); //show the user all the possible answers
 
 //personalized parting message
-alert('Thanks again ' + username + ' for visiting my page. Please feel free to come back and check on any updates. Have a great day!');
+alert(username + ', you got ' + points + ' out of 7 questions correct on the quiz. Thank you for visiting my page. I hope you enjoyed it!');
