@@ -116,11 +116,11 @@ function statesLived() {
       alert('You\'re right!');
       break; // stops code once correct answer is entered
     } else if (guess > 3) {
-      console.log('too high', guess);  // track user input
+      console.log('too high', guess); // track user input
       numOfAttempts--; //reduces number of guess by 1
       alert(`Too high. You have ${numOfAttempts} attempts left`);
     } else if (guess < 3) {
-      console.log('Too low', guess);  // track user input
+      console.log('Too low', guess); // track user input
       numOfAttempts--; //reduces number of guess by 1
       alert(`Too low. You have ${numOfAttempts} attempts left`); //gives correct answer when attempts = 0
     }
@@ -132,8 +132,8 @@ statesLived();
 
 //Question 7: (got help from Ryan, instructor, on adding conditional expressions to for and while loops)
 
+let booksILike = ['thriller', 'mystery', 'historical fiction', 'crime', 'science fiction'];
 function typesOfBooks() {
-  let booksILike = ['thriller', 'mystery', 'historical fiction', 'crime', 'science fiction'];
   let attempts = 6;
   let correctAnswer = false; //set as false since answer likely to be false
   while (attempts > 0 && !correctAnswer) { //while loop runs when "attempts" is greater than 0 AND "correctAnswer" is true; that's the purpose of the "!" before correctAnswer so code can run
