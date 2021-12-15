@@ -64,20 +64,23 @@ function iHaveSibling() {
 }
 iHaveSibling();
 
-//Question 4: Am I a night owl?
-let nightOwl = prompt('Am I a night owl?').toLowerCase();
-//console.log(nightOwl);  //proof that code worked
-if (nightOwl === 'yes' || nightOwl === 'y') {
-  //console.log('Yes, I\'m a night owl');
-  points++; //gives 1 point for correct answer
-  alert('Yes, I\'m a night owl. Hoot, Hoot');
-} else if (nightOwl === 'no' || nightOwl === 'n') {
-  //console.log('No, I am a night owl');
-  alert('No, I like staying up late');
-} else {
-  //console.log('Please answer yes or no');
-  alert('Please answer yes or no');
+function amNightOwl() {
+  //Question 4: Am I a night owl?
+  let nightOwl = prompt('Am I a night owl?').toLowerCase();
+  //console.log(nightOwl);  //proof that code worked
+  if (nightOwl === 'yes' || nightOwl === 'y') {
+    //console.log('Yes, I\'m a night owl');
+    points++; //gives 1 point for correct answer
+    alert('Yes, I\'m a night owl. Hoot, Hoot');
+  } else if (nightOwl === 'no' || nightOwl === 'n') {
+    //console.log('No, I am a night owl');
+    alert('No, I like staying up late');
+  } else {
+    //console.log('Please answer yes or no');
+    alert('Please answer yes or no');
+  }
 }
+amNightOwl();
 
 //Question 5: Do I like coffee?
 let likeCoffee = prompt('Do I like coffee?').toLowerCase();
