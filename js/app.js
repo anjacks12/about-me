@@ -82,20 +82,23 @@ function amNightOwl() {
 }
 amNightOwl();
 
-//Question 5: Do I like coffee?
-let likeCoffee = prompt('Do I like coffee?').toLowerCase();
-//console.log(likeCoffee);  //proof that code worked
-if (likeCoffee === 'yes' || likeCoffee === 'y') {
-  //console.log('Yes, I like coffee');
-  points++; //gives 1 point for correct answer
-  alert('Yes, I like coffee');
-} else if (likeCoffee === 'no' || likeCoffee === 'n') {
-  //console.log('No, I do like coffee');
-  alert('No, I LOVE coffee');
-} else {
-  //console.log('Please answer yes or no');
-  alert('Please answer yes or no');
+function iLikeCoffee() {
+  //Question 5: Do I like coffee?
+  let likeCoffee = prompt('Do I like coffee?').toLowerCase();
+  //console.log(likeCoffee);  //proof that code worked
+  if (likeCoffee === 'yes' || likeCoffee === 'y') {
+    //console.log('Yes, I like coffee');
+    points++; //gives 1 point for correct answer
+    alert('Yes, I like coffee');
+  } else if (likeCoffee === 'no' || likeCoffee === 'n') {
+    //console.log('No, I do like coffee');
+    alert('No, I LOVE coffee');
+  } else {
+    //console.log('Please answer yes or no');
+    alert('Please answer yes or no');
+  }
 }
+iLikeCoffee();
 
 //Question 6: user guesses a number; has 4 attempts to get it correct; prompt to display if guesses are too high or low; displays correct answer if guesses are incorrect; got help from Tyler, TA, on how placement of "--" to decrement numOfAttempts
 let numOfAttempts = 4;
