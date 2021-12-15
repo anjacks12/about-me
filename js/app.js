@@ -131,22 +131,27 @@ function statesLived() {
 statesLived();
 
 //Question 7: (got help from Ryan, instructor, on adding conditional expressions to for and while loops)
-let booksILike = ['thriller', 'mystery', 'historical fiction', 'crime', 'science fiction'];
-let attempts = 6;
-let correctAnswer = false; //set as false since answer likely to be false
-while (attempts > 0 && !correctAnswer) { //while loop runs when "attempts" is greater than 0 AND "correctAnswer" is true; that's the purpose of the "!" before correctAnswer so code can run
-  let guesses = prompt('What are my favorite types of books?');
-  attempts--;
-  for (let i = 0; i < 6; i++) {
-    if (guesses === booksILike[i]) {
-      points++;
-      alert('You got it right!');
-      correctAnswer = true; //changed "correctAnswer" to true to exit out of loop when a correct answer is typed; this changes the value of !correctAnswer, which was true in line 114, to false so the code stops running
+
+function typesOfBooks() {
+  let booksILike = ['thriller', 'mystery', 'historical fiction', 'crime', 'science fiction'];
+  let attempts = 6;
+  let correctAnswer = false; //set as false since answer likely to be false
+  while (attempts > 0 && !correctAnswer) { //while loop runs when "attempts" is greater than 0 AND "correctAnswer" is true; that's the purpose of the "!" before correctAnswer so code can run
+    let guesses = prompt('What are my favorite types of books?');
+    attempts--;
+    for (let i = 0; i < 6; i++) {
+      if (guesses === booksILike[i]) {
+        points++;
+        alert('You got it right!');
+        correctAnswer = true; //changed "correctAnswer" to true to exit out of loop when a correct answer is typed; this changes the value of !correctAnswer, which was true in line 114, to false so the code stops running
+      }
+    } if (correctAnswer === false) {
+      alert(`Sorry, try again. You have ${attempts} attempts left.`);
     }
-  } if (correctAnswer === false) {
-    alert(`Sorry, try again. You have ${attempts} attempts left.`);
   }
 }
+typesOfBooks();
+
 alert(` I like reading ${booksILike} novels`); //show the user all the possible answers
 
 //personalized parting message
