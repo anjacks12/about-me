@@ -46,20 +46,23 @@ function iLikeDriving() {
 }
 iLikeDriving();
 
-//Question 3: Am I an only child?
-let haveSibling = prompt('Am I an only child?').toLowerCase();
-//console.log(haveSibling); //proof that code worked
-if (haveSibling === 'yes' || haveSibling === 'y') {
-  //console.log('No, I have a brother');
-  alert('No, I have a brother');
-} else if (haveSibling === 'no' || haveSibling === 'n') {
-  //console.log('Yes, I do have a sibling');
-  points++; //gives 1 point for correct answer
-  alert('Correct, I do have a brother');
-} else {
-  //console.log('Please answer yes or no');
-  alert('Please answer yes or no');
+function iHaveSibling() {
+  //Question 3: Am I an only child?
+  let haveSibling = prompt('Am I an only child?').toLowerCase();
+  //console.log(haveSibling); //proof that code worked
+  if (haveSibling === 'yes' || haveSibling === 'y') {
+    //console.log('No, I have a brother');
+    alert('No, I have a brother');
+  } else if (haveSibling === 'no' || haveSibling === 'n') {
+    //console.log('Yes, I do have a sibling');
+    points++; //gives 1 point for correct answer
+    alert('Correct, I do have a brother');
+  } else {
+    //console.log('Please answer yes or no');
+    alert('Please answer yes or no');
+  }
 }
+iHaveSibling();
 
 //Question 4: Am I a night owl?
 let nightOwl = prompt('Am I a night owl?').toLowerCase();
