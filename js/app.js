@@ -28,20 +28,23 @@ function iLikeReading() {
 }
 iLikeReading();
 
-//Question 2: Is Korean my favorite food? Added .toLowerCase() after prompt to make code cleaner (via example given in class)
-let likeDriving = prompt('Do I like driving in Seattle? Yes or No').toLowerCase();
-//console.log(likeDriving); //proof that code worked
-if (likeDriving === 'yes' || likeDriving === 'y') {
-  //console.log('No. I actually hate driving downtown');
-  alert('No. I actually hate driving downtown. Parking is hard to find');
-} else if (likeDriving === 'no' || likeDriving === 'n') {
-  //console.log('Yes, I don't like driving in Seattle');
-  points++; //gives 1 point for correct answer
-  alert('Yes, I don\'t like driving in Seattle. I prefer the bus');
-} else {
-  //console.log('Please answer yes or no');
-  alert('Please answer yes or no');
+function iLikeDriving() {
+  //Question 2: Is Korean my favorite food? Added .toLowerCase() after prompt to make code cleaner (via example given in class)
+  let likeDriving = prompt('Do I like driving in Seattle? Yes or No').toLowerCase();
+  //console.log(likeDriving); //proof that code worked
+  if (likeDriving === 'yes' || likeDriving === 'y') {
+    //console.log('No. I actually hate driving downtown');
+    alert('No. I actually hate driving downtown. Parking is hard to find');
+  } else if (likeDriving === 'no' || likeDriving === 'n') {
+    //console.log('Yes, I don't like driving in Seattle');
+    points++; //gives 1 point for correct answer
+    alert('Yes, I don\'t like driving in Seattle. I prefer the bus');
+  } else {
+    //console.log('Please answer yes or no');
+    alert('Please answer yes or no');
+  }
 }
+iLikeDriving();
 
 //Question 3: Am I an only child?
 let haveSibling = prompt('Am I an only child?').toLowerCase();
