@@ -5,7 +5,8 @@
 This web page is an introduction to who I am. It includes a 7 question quiz. The first five asks the user y/n questions about if I like certain things and responds by either telling them they are correct or wrong. Question 6 gives the user four attempts to guess a number and the question 7 gives the user six attempts to guess an answer. Both answers for questions 6 and 7 are displayed for the user to see after the attempts have been made. The user is also prompted to enter their name in that give a personalized greeting and parting message at the end that includes the number of questions they answered correctly.
 
 ### Author: Angela Jackson
-
+**Lab 04** Driver - Andres Navigator - Angela
+We worked together in lab 04 to add functions to our questions.
 ### Links and Resources
 
 * [News Medical Life: Science *What is Cytogenetics*](https://www.news-medical.net/life-sciences/What-is-Cytogenetics.aspx)
