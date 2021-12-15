@@ -101,30 +101,34 @@ function iLikeCoffee() {
 iLikeCoffee();
 
 //Question 6: user guesses a number; has 4 attempts to get it correct; prompt to display if guesses are too high or low; displays correct answer if guesses are incorrect; got help from Tyler, TA, on how placement of "--" to decrement numOfAttempts
-let numOfAttempts = 4;
-while (numOfAttempts > 0) {
-  let guess = prompt('How many states have I lived in?');
-  guess = parseInt(guess);
-  //console.log(numberOfGuess); see user's input
-  //console.log(typeof(numberOfGuess)); to check that data type is number
 
-  if (guess === 3) { //correct answer is 3
-    console.log('correct', guess); //track user input
-    points++; //gives 1 point for answering question correctly
-    alert('You\'re right!');
-    break; // stops code once correct answer is entered
-  } else if (guess > 3) {
-    console.log('too high', guess);  // track user input
-    numOfAttempts--; //reduces number of guess by 1
-    alert(`Too high. You have ${numOfAttempts} attempts left`);
-  } else if (guess < 3) {
-    console.log('Too low', guess);  // track user input
-    numOfAttempts--; //reduces number of guess by 1
-    alert(`Too low. You have ${numOfAttempts} attempts left`); //gives correct answer when attempts = 0
+function statesLived() {
+  let numOfAttempts = 4;
+  while (numOfAttempts > 0) {
+    let guess = prompt('How many states have I lived in?');
+    guess = parseInt(guess);
+    //console.log(numberOfGuess); see user's input
+    //console.log(typeof(numberOfGuess)); to check that data type is number
+
+    if (guess === 3) { //correct answer is 3
+      console.log('correct', guess); //track user input
+      points++; //gives 1 point for answering question correctly
+      alert('You\'re right!');
+      break; // stops code once correct answer is entered
+    } else if (guess > 3) {
+      console.log('too high', guess);  // track user input
+      numOfAttempts--; //reduces number of guess by 1
+      alert(`Too high. You have ${numOfAttempts} attempts left`);
+    } else if (guess < 3) {
+      console.log('Too low', guess);  // track user input
+      numOfAttempts--; //reduces number of guess by 1
+      alert(`Too low. You have ${numOfAttempts} attempts left`); //gives correct answer when attempts = 0
+    }
+  } if (!numOfAttempts) {
+    alert('Sorry, the correct answer was 3');
   }
-} if (!numOfAttempts) {
-  alert('Sorry, the correct answer was 3');
 }
+statesLived();
 
 //Question 7: (got help from Ryan, instructor, on adding conditional expressions to for and while loops)
 let booksILike = ['thriller', 'mystery', 'historical fiction', 'crime', 'science fiction'];
