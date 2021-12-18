@@ -48,7 +48,7 @@ questionQuiz();
 // iLikeReading();
 
 // function iLikeDriving() {
-//   //Question 2: Is Korean my favorite food? Added .toLowerCase() after prompt to make code cleaner (via example given in class)
+//   //Question 2: Do I like driving in Seattle? Added .toLowerCase() after prompt to make code cleaner (via example given in class)
 //   let likeDriving = prompt('Do I like driving in Seattle? Yes or No').toLowerCase();
 //   //console.log(likeDriving); //proof that code worked
 //   if (likeDriving === 'yes' || likeDriving === 'y') {

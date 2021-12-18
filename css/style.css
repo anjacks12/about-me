@@ -15,41 +15,83 @@ h1 {
   text-align: center;
 }
 /* changing font style and size for sub-headings*/
+
 h3 {
   font-weight: bold;
   font-family: Cambria;
   font-size: x-large;
   padding-top: 1rem;
 }
-/* adjusting wa image so that it floats on left side of "a little background section */
-.image1 {
+
+/*Background section*/
+#background {
+  float: right;
+}
+.image1 { /* adjusting wa image so that it floats on left side of "a little background section */
   float: left;
   padding-right: 1rem;
   padding-bottom: 1rem;
   position: relative;
-  top: 1rem;
+  top: 20px;
 }
 
-/* adjusting image so that it floats right of education section */
-.image2 {
+/*Education section*/
+#education {
+  float: left;
+  padding: 1rem;
+}
+.image2 { /* adjusting image so that it floats right of education section */
   float: right;
   padding-left: 1rem;
   position: relative;
-  top: 1rem;
+  top: 20px;
 }
 
-/* adjusting image so that it floats to left of job section*/
-.image3 {
+/*Job section*/
+#job {
+  float: right;
+  padding: 1rem;
+}
+.image3 {  /* adjusting image so that it floats to left of job section*/
   float: left;
   padding-right: 1rem;
   position: relative;
   top: 0.5rem;
  }
 
-/* adjusting image so that it floats to right of goals*/
-.image4 {
+ /*Goals section*/
+
+.image4 {  /* adjusting image so that it floats to right of goals*/
   float: right;
   padding-left: 1rem;
   position: relative;
-  top: 1.5rem;
+  top: 2rem;
+}
+#goals {
+  float: left;
+  padding: 1rem;
+  max-width: max-content;
+  word-wrap:break-word;
+  padding-bottom: 2rem;
+}
+/*Work Experience section*/
+#expierence {
+  border-style: dashed;
+  border-color: brown;
+  border-width: 0.5rem;
+  margin: 1rem;
+  margin-top: 0;
+  font-family: Arial;
+  float: left;
+  
+}
+
+/*Favorite Authors section*/
+#authors {
+  border-style:dotted;
+  border-color: black;
+  border-width: 0.25rem;
+
+  font-family: Courier New;
+  float: right;
 }
