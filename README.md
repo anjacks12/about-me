@@ -10,8 +10,8 @@ This web page is an introduction to who I am. It includes a 7 question quiz. The
 
 * On Lab 04 Andres and I worked together in lab 04 to add functions to our questions and include arrays in questions 1 through 5.
 
-  * Andres was driver, [I was navigator](https://github.com/anjacks12/about-me/pull/2)
-  * Andres was navigator, [I was driver on:](https://github.com/AndresMillsGallego/about-me/pull/3)
+  * Andres was driver, I was navigator
+  * Andres was navigator, I was driver
 
 ### Links and Resources
 

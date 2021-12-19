@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* doing general formatting of background color and font */
 body {
   background-color: bisque;
@@ -79,10 +83,11 @@ h3 {
   border-style: dashed;
   border-color: brown;
   border-width: 0.5rem;
-  margin: 1rem;
-  margin-top: 0;
+  margin-left: 12rem;
+  padding: 1.5rem;
   font-family: Arial;
   float: left;
+  background-color: darkgray;
   
 }
 
@@ -91,7 +96,15 @@ h3 {
   border-style:dotted;
   border-color: black;
   border-width: 0.25rem;
-
+  margin-bottom: 5rem;
+  margin-right: 15rem;
+  padding: 1rem 2rem;
   font-family: Courier New;
+  font-weight: bold;
   float: right;
+}
+
+h4 {
+  font-weight: bold;
+  padding-bottom: 1rem;
 }

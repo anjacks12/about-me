@@ -1,14 +1,14 @@
 'use strict';
 
-//console.log('hello'); //This was my 'proof of life' code to check
 
 //Asking user for name and giving a personalized greeting
 let username = prompt('What is your name?');
-//console.log(username);  //proof that code worked
 alert('Hello ' + username + '! Welcome to my page. Here are seven questions to get to know me better.');
+
 
 let points = 0; //counting number of questions user gets correct starting from 0
 
+//Questions 1 through 5 incorporated in array; worked on this with Andres for lab 04 stretch goal
 let questions = ['Do I like reading? Yes or No','Do I like driving in Seattle? Yes or No','Am I an only child?','Am I a night owl?','Do I like coffee?'];
 let correctAnswers = ['yes','no','no','yes','yes'];
 let replies = ['You\'re Right!','Sorry, not correct.'];
@@ -16,118 +16,24 @@ let replies = ['You\'re Right!','Sorry, not correct.'];
 function questionQuiz() {
   for (let i = 0; i < questions.length; i++) {
     let userAnswer = prompt(questions[i]).toLowerCase();
-    if (userAnswer === correctAnswers[i]) {
+    if (userAnswer === correctAnswers[i] || userAnswer === 'y') {
       points++;
       alert(replies[0]);
-    } else if (userAnswer !== correctAnswers[i]) {
+    } else if (userAnswer !== correctAnswers[i] && userAnswer === 'n') {
       alert(replies[1]);
     } else {
-      alert('???');
+      alert('Please answer yes or no');
     }
   }
 }
 questionQuiz();
 
-// function iLikeReading() {
-//   //Question 1: Do I like reading? Assigning lowerLikeReading as variable to change likeReading input to lower case by using .toLowerCase()
-//   let likeReading = prompt('Do I like reading? Yes or No');
-//   let lowerLikeReading = likeReading.toLowerCase();
-//   //console.log(likeReading); //proof that code initially worked
-//   if (lowerLikeReading === 'yes' || lowerLikeReading === 'y') {
-//     //console.log('Yes, I like reading');
-//     points++; //gives 1 point for correct answer
-//     alert('Yes, I like reading');
-//   } else if (lowerLikeReading === 'no' || lowerLikeReading === 'n') {
-//     //console.log('No, I do like reading');
-//     alert('No, I do like reading');
-//   } else {
-//     //console.log('Please answer yes or no');
-//     alert('Please answer yes or no');
-//   }
-// }
-// iLikeReading();
-
-// function iLikeDriving() {
-//   //Question 2: Do I like driving in Seattle? Added .toLowerCase() after prompt to make code cleaner (via example given in class)
-//   let likeDriving = prompt('Do I like driving in Seattle? Yes or No').toLowerCase();
-//   //console.log(likeDriving); //proof that code worked
-//   if (likeDriving === 'yes' || likeDriving === 'y') {
-//     //console.log('No. I actually hate driving downtown');
-//     alert('No. I actually hate driving downtown. Parking is hard to find');
-//   } else if (likeDriving === 'no' || likeDriving === 'n') {
-//     //console.log('Yes, I don't like driving in Seattle');
-//     points++; //gives 1 point for correct answer
-//     alert('Yes, I don\'t like driving in Seattle. I prefer the bus');
-//   } else {
-//     //console.log('Please answer yes or no');
-//     alert('Please answer yes or no');
-//   }
-// }
-// iLikeDriving();
-
-// function iHaveSibling() {
-//   //Question 3: Am I an only child?
-//   let haveSibling = prompt('Am I an only child?').toLowerCase();
-//   //console.log(haveSibling); //proof that code worked
-//   if (haveSibling === 'yes' || haveSibling === 'y') {
-//     //console.log('No, I have a brother');
-//     alert('No, I have a brother');
-//   } else if (haveSibling === 'no' || haveSibling === 'n') {
-//     //console.log('Yes, I do have a sibling');
-//     points++; //gives 1 point for correct answer
-//     alert('Correct, I do have a brother');
-//   } else {
-//     //console.log('Please answer yes or no');
-//     alert('Please answer yes or no');
-//   }
-// }
-// iHaveSibling();
-
-// function amNightOwl() {
-//   //Question 4: Am I a night owl?
-//   let nightOwl = prompt('Am I a night owl?').toLowerCase();
-//   //console.log(nightOwl);  //proof that code worked
-//   if (nightOwl === 'yes' || nightOwl === 'y') {
-//     //console.log('Yes, I\'m a night owl');
-//     points++; //gives 1 point for correct answer
-//     alert('Yes, I\'m a night owl. Hoot, Hoot');
-//   } else if (nightOwl === 'no' || nightOwl === 'n') {
-//     //console.log('No, I am a night owl');
-//     alert('No, I like staying up late');
-//   } else {
-//     //console.log('Please answer yes or no');
-//     alert('Please answer yes or no');
-//   }
-// }
-// amNightOwl();
-
-// function iLikeCoffee() {
-//   //Question 5: Do I like coffee?
-//   let likeCoffee = prompt('Do I like coffee?').toLowerCase();
-//   //console.log(likeCoffee);  //proof that code worked
-//   if (likeCoffee === 'yes' || likeCoffee === 'y') {
-//     //console.log('Yes, I like coffee');
-//     points++; //gives 1 point for correct answer
-//     alert('Yes, I like coffee');
-//   } else if (likeCoffee === 'no' || likeCoffee === 'n') {
-//     //console.log('No, I do like coffee');
-//     alert('No, I LOVE coffee');
-//   } else {
-//     //console.log('Please answer yes or no');
-//     alert('Please answer yes or no');
-//   }
-// }
-// iLikeCoffee();
-
-//Question 6: user guesses a number; has 4 attempts to get it correct; prompt to display if guesses are too high or low; displays correct answer if guesses are incorrect; got help from Tyler, TA, on how placement of "--" to decrement numOfAttempts
-
+//Question 6: (got help from Talyor, TA on how to keep track of number of attempts)
 function statesLived() {
   let numOfAttempts = 4;
   while (numOfAttempts > 0) {
     let guess = prompt('How many states have I lived in?');
     guess = parseInt(guess);
-    //console.log(numberOfGuess); see user's input
-    //console.log(typeof(numberOfGuess)); to check that data type is number
 
     if (guess === 3) { //correct answer is 3
       console.log('correct', guess); //track user input
@@ -149,8 +55,8 @@ function statesLived() {
 }
 statesLived();
 
-//Question 7: (got help from Ryan, instructor, on adding conditional expressions to for and while loops)
 
+//Question 7: (got help from Ryan, instructor, on adding conditional expressions to for and while loops)
 let booksILike = ['thriller', 'mystery', 'historical fiction', 'crime', 'science fiction'];
 function typesOfBooks() {
   let attempts = 6;
@@ -170,8 +76,8 @@ function typesOfBooks() {
   }
 }
 typesOfBooks();
-
 alert(` I like reading ${booksILike} novels`); //show the user all the possible answers
+
 
 //personalized parting message
 alert(username + ', you got ' + points + ' out of 7 questions correct on the quiz. Thank you for visiting my page. I hope you enjoyed it!');
